@@ -1,0 +1,14 @@
+{
+  "name": "metalsmith-lunr",
+  "version": "0.0.0",
+  "description": "Lunr plugin for Metalsmith",
+  "main": "lib/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "CMClay",
+  "license": "MIT",
+  "dependencies": {
+    "lunr": "^0.5.4"
+  }
+}
