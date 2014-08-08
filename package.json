@@ -10,5 +10,18 @@
   "license": "MIT",
   "dependencies": {
     "lunr": "^0.5.4"
-  }
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Retsly/metalsmith-lunr"
+  },
+  "keywords": [
+    "metalsmith",
+    "lunr"
+  ],
+  "bugs": {
+    "url": "https://github.com/Retsly/metalsmith-lunr/issues"
+  },
+  "homepage": "https://github.com/Retsly/metalsmith-lunr"
 }
