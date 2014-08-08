@@ -1,6 +1,6 @@
 {
   "name": "metalsmith-lunr",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Lunr plugin for Metalsmith",
   "main": "lib/index.js",
   "scripts": {
