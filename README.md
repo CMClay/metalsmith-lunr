@@ -22,7 +22,7 @@ tags: javascript lunr search
 My article contents...
 ```
 
-Use file metadata as `fields` for the search and assign weight for each field. The `content` field refers to the files actual content.
+Use file metadata as `fields` for the search and assign weight for each field. The `content` field refers Metalsmith's internal record of the files contents and should not be included in the file metadata.
 
 ```js
 var lunr = require('metalsmith-lunr');
