@@ -49,9 +49,9 @@ var results = index.search("Your Search Here");
 
 #### Optional Parameters
 
-- `fields`: {<field>:<search weight>}
-- `ref`: <index reference>
-- `indexPath`: <path for JSON index file>
+- `fields`: {`field`: `search weight`}
+- `ref`: `index reference`
+- `indexPath`: `path for JSON index file`
  
 
 All of the files with a matching `collection` will be added to an array that is exposed as a key of the same name on the global Metalsmith `metadata`.
