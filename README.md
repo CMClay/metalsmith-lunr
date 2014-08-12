@@ -84,7 +84,7 @@ var results = idx.search("Your Search Terms Here");
 ```
 ## Tests
 
-`npm test'
+`npm test`
 
 ## License
 
