@@ -37,24 +37,22 @@ metalsmith.use(lunr({
 }));
 ```
 
-##Client Side Search
-
-Metalsmith-lunr will generate searchIndex.json. Include [lunr.js](https://raw.githubusercontent.com/olivernn/lunr.js/master/lunr.min.js) in your javascript source files. Client side search example can be found [here](http://lunrjs.com/example/).
-
-Once the JSON file has been parsed into javascript, simply run the following:
-```js
-index = lunr.Index.load(index)
-var results = index.search("Your Search Here");
-```
-
 #### Optional Parameters
 
 - `fields`: {`field`: `search weight`}
 - `ref`: `index reference`
 - `indexPath`: `path for JSON index file`
  
+##Client Side Search
 
-All of the files with a matching `collection` will be added to an array that is exposed as a key of the same name on the global Metalsmith `metadata`.
+Metalsmith-lunr will generate searchIndex.json. Include [lunr.js](https://raw.githubusercontent.com/olivernn/lunr.js/master/lunr.min.js) in your javascript source files. Client side search example can be found [here](http://lunrjs.com/example/).
+
+Once the JSON file has been parsed into javascript, simply run the following:
+```js
+//index is the parsed JSON file
+idx = lunr.Index.load(index)
+var results = idx.search("Your Search Here");
+```
 
 ## CLI Usage
 
@@ -64,7 +62,7 @@ All of the files with a matching `collection` will be added to an array that is 
     "metalsmith-lunr": {
       "fields": {
         "tags": 10,
-        contents: 1
+        "contents": 1
       }
     }
   }
