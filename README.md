@@ -22,7 +22,7 @@ tags: maybe some tags for indexing
 My article contents...
 ```
 
-Metalsmith-lunr can be simply used without options as follows:
+Metalsmith-lunr can be used without options:
 ```js
 var lunr = require('metalsmith-lunr');
 
@@ -50,7 +50,7 @@ metalsmith.use(lunr({
 - `ref`: `metadata search reference for document`
 - `indexPath`: `path for JSON index file`
 
-#### Default Parameters
+#### Default Parameter Values
 
   - `fields`: {`contents`: `1`}
   - `ref`: `filePath`
@@ -65,7 +65,7 @@ Once the JSON file has been parsed into javascript, simply run the following:
 ```js
 //index is the parsed JSON file
 idx = lunr.Index.load(index)
-var results = idx.search("Your Search Here");
+var results = idx.search("Your Search Terms Here");
 ```
 
 ## CLI Usage
