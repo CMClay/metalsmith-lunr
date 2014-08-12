@@ -16,10 +16,17 @@ Include `lunr: true` in file metadata to include it in the search index.
 ---
 lunr: true
 title: My Article
-tags: javascript lunr search
+tags: maybe some tags for indexing
 ---
 
 My article contents...
+```
+
+Metalsmith-lunr can be simply used without options as follows:
+```js
+var lunr = require('metalsmith-lunr');
+
+metalsmith.use(lunr()).
 ```
 
 Use file metadata as `fields` for the search and assign weight for each field. The `content` field refers Metalsmith's internal record of the files contents and should not be included in the file metadata.
@@ -39,9 +46,16 @@ metalsmith.use(lunr({
 
 #### Optional Parameters
 
-- `fields`: {`field`: `search weight`}
-- `ref`: `index reference`
+- `fields`: {`metadata search field`: `search weight`}
+- `ref`: `metadata search reference for document`
 - `indexPath`: `path for JSON index file`
+
+#### Default Parameters
+
+  - `fields`: {`contents`: `1`}
+  - `ref`: `filePath`
+  - `indexPath`: `searchIndex.json`
+
  
 ##Client Side Search
 
