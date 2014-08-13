@@ -1,6 +1,6 @@
 {
   "name": "metalsmith-lunr",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "Lunr plugin for Metalsmith",
   "main": "lib/index.js",
   "scripts": {
@@ -17,14 +17,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/Retsly/metalsmith-lunr"
+    "url": "https://github.com/CMClay/metalsmith-lunr"
   },
   "keywords": [
     "metalsmith",
     "lunr"
   ],
   "bugs": {
-    "url": "https://github.com/Retsly/metalsmith-lunr/issues"
+    "url": "https://github.com/CMClay/metalsmith-lunr/issues"
   },
-  "homepage": "https://github.com/Retsly/metalsmith-lunr"
+  "homepage": "https://github.com/CMClay/metalsmith-lunr"
 }
