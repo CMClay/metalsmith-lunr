@@ -12,7 +12,7 @@ Builds a searchable JSON index based on Metalsmith metadata.
 
 Include `lunr: true` in file metadata to include it in the search index.
 
-```markdown
+```
 ---
 lunr: true
 title: My Article
