@@ -40,6 +40,10 @@ metalsmith.use(lunr({
   fields: {
       contents: 1,
       tags: 10
+  },
+  preprocess: function(content) {
+    // Replace all occurrences of __title__ with the current file's title metadata.
+    return content.replace(/__title__/g, this.title);
   }
 }));
 ```
@@ -49,6 +53,7 @@ metalsmith.use(lunr({
 - `fields`: {`metadata search field`: `search weight`}
 - `ref`: `metadata search reference for document`
 - `indexPath`: `path for JSON index file`
+- `preprocess`: a callback function that can pre-process the content of each file before it is indexed. (For example stripping HTML tags). This will not affect the content of the files themselves. The callback is passed the content as a string to it's first argument. The metadata (including the raw content buffer) can be access with `this`. The callback **must return** a string.
 
 #### Default Parameter Values
 
