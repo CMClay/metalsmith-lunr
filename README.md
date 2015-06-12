@@ -46,8 +46,8 @@ metalsmith.use(lunr({
   },
   pipelineFunctions: [
     lunr_.trimmer,
-    lunr.no.stopWordFilter,
-    lunr.no.stemmer
+    lunr_.no.stopWordFilter,
+    lunr_.no.stemmer
   ],
   preprocess: function(content) {
     // Replace all occurrences of __title__ with the current file's title metadata.
