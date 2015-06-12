@@ -33,6 +33,9 @@ Use file metadata as `fields` for the search and assign weight for each field. T
 
 ```js
 var lunr = require('metalsmith-lunr');
+var lunr_ = require('lunr');
+require('lunr-languages/lunr.stemmer.support')(lunr_);
+require('lunr-languages/lunr.no')(lunr_);
 
 metalsmith.use(lunr({
   ref: 'title',
@@ -41,6 +44,11 @@ metalsmith.use(lunr({
       contents: 1,
       tags: 10
   },
+  pipelineFunctions: [
+    lunr_.trimmer,
+    lunr.no.stopWordFilter,
+    lunr.no.stemmer
+  ],
   preprocess: function(content) {
     // Replace all occurrences of __title__ with the current file's title metadata.
     return content.replace(/__title__/g, this.title);
@@ -53,6 +61,7 @@ metalsmith.use(lunr({
 - `fields`: {`metadata search field`: `search weight`}
 - `ref`: `metadata search reference for document`
 - `indexPath`: `path for JSON index file`
+- `pipelineFunctions`: [`lunr pipeline functions`] Functions will be called in order by lunr, see [lunr doc](http://lunrjs.com/docs/#Pipeline) for more information.
 - `preprocess`: a callback function that can pre-process the content of each file before it is indexed. (For example stripping HTML tags). This will not affect the content of the files themselves. The callback is passed the content as a string to it's first argument. The metadata (including the raw content buffer) can be access with `this`. The callback **must return** a string.
 
 #### Default Parameter Values
