@@ -9,10 +9,10 @@
   "author": "CMClay",
   "license": "MIT",
   "dependencies": {
-    "lunr": "^0.5.4"
+    "lunr": "^2.3.5"
   },
   "devDependencies": {
-    "metalsmith": "^0.9.0",
+    "metalsmith": "^2.3.0",
     "mocha": "^1.21.4"
   },
   "repository": {
